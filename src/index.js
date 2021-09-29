@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Provider, useDispatch } from "react-redux";
 
 import { useDimensions, useDeviceOrientation } from '@react-native-community/hooks';
-import { init } from './appRedux/main';
+import { init } from './appRedux/slices/main';
 import AppNavigationContainer from './navigation';
 import _ from 'lodash';
 

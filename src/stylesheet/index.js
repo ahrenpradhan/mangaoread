@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch } from 'react-redux';
-import { colorTheme } from '../appRedux/main';
+import { colorTheme } from '../appRedux/slices/main';
 import template1 from './themes/template1';
 
 const StyleSheetWrapper = (props) => {

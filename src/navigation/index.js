@@ -13,13 +13,17 @@ export default function AppNavigationContainer() {
                 switch (route.name) {
                     case 'Library':
                         iconName = focused
-                            ? 'ios-information-circle'
-                            : 'ios-information-circle-outline';
+                            ? 'book'
+                            : 'book-outline';
+                        break;
+                    case 'Recents':
+                        iconName = focused ? 'time' : 'time-outline';
                         break;
                     case 'Browse':
-                    case 'Recents':
+                        iconName = focused ? 'browsers' : 'browsers-outline';
+                        break;
                     default:
-                        iconName = focused ? 'list-circle-outline' : 'list-outline';
+                        iconName = focused ? 'list-circle-outline' : 'browsers-outline';
                         break;
                 }
                 return <Ionicons name={iconName} size={size} color={color} />;
