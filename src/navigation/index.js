@@ -1,16 +1,13 @@
 import React from 'react';
-
 import Ionicons from '@expo/vector-icons/Ionicons';
-
-import { setPage } from '../appRedux/slices/page';
 
 import TabsWrapper from './tabsWrapper';
 import LibraryScreen from '../screen/library';
 import BrowseScreen from '../screen/browse';
 import RecentsScreen from '../screen/recents';
+import SettingsScreen from '../screen/settings';
 
 export default function AppNavigationContainer() {
-
     const tabData = {
         screenOptions: ({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
@@ -27,6 +24,9 @@ export default function AppNavigationContainer() {
                     case 'Browse':
                         iconName = focused ? 'browsers' : 'browsers-outline';
                         break;
+                    case 'Settings':
+                        iconName = focused ? 'settings' : 'settings-outline';
+                        break;
                     default:
                         iconName = focused ? 'list-circle-outline' : 'browsers-outline';
                         break;
@@ -35,6 +35,7 @@ export default function AppNavigationContainer() {
             },
             tabBarActiveTintColor: 'tomato',
             tabBarInactiveTintColor: 'gray',
+            headerShown: false,
         }),
         list: [
             {
@@ -46,6 +47,9 @@ export default function AppNavigationContainer() {
             }, {
                 name: 'Browse',
                 component: BrowseScreen
+            }, {
+                name: 'Settings',
+                component: SettingsScreen
             }
         ]
     };

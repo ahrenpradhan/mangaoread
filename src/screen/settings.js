@@ -1,19 +1,12 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import ScreenWrapper from './screenWrapper';
 
-
-
-
-
-export default function BrowseScreen({ route, navigation }) {
-    // useEffect(() => {
-    //     console.log('haha')
-    // }, [])
+export default function SettingsScreen({ route, navigation }) {
     return (
         <ScreenWrapper route={route} navigation={navigation}>
             <View style={styles.container}>
-                <Text>Browse!</Text>
+                <Text>Settings!</Text>
             </View>
         </ScreenWrapper>
     );
