@@ -9,7 +9,7 @@ const pageSlice = createSlice({
     initialState,
     reducers: {
         setPage: (state, action) => {
-            state.theme = action.payload.page
+            state.page = action.payload.page
         },
     },
     // extraReducers: {

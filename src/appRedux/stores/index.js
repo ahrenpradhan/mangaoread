@@ -1,5 +1,4 @@
 import logger from 'redux-logger';
-import { combineReducers } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 
 import MainReducer from '../slices/main';
@@ -16,6 +15,10 @@ export default configureStore({
         main: MainReducer,
         page: PageReducer
     },
-    middleware: (getDefaultMiddleware) => getDefaultMiddleware().concat(logger),
+    middleware:
+        (getDefaultMiddleware) =>
+            getDefaultMiddleware()
+    // .concat(logger)
+    ,
 
 });

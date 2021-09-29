@@ -1,10 +1,13 @@
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { Text, View } from 'react-native';
+import ScreenWrapper from './screenWrapper';
 
-export default function RecentScreen() {
+export default function RecentScreen({ route, navigation }) {
     return (
-        <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <Text>Recents!</Text>
-        </View>
+        <ScreenWrapper route={route} navigation={navigation}>
+            <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                <Text>Recents!</Text>
+            </View>
+        </ScreenWrapper>
     );
 }

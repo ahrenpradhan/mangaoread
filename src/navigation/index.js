@@ -1,11 +1,16 @@
 import React from 'react';
-import TabsWrapper from './tabsWrapper';
+
 import Ionicons from '@expo/vector-icons/Ionicons';
+
+import { setPage } from '../appRedux/slices/page';
+
+import TabsWrapper from './tabsWrapper';
 import LibraryScreen from '../screen/library';
 import BrowseScreen from '../screen/browse';
 import RecentsScreen from '../screen/recents';
 
 export default function AppNavigationContainer() {
+
     const tabData = {
         screenOptions: ({ route }) => ({
             tabBarIcon: ({ focused, color, size }) => {
